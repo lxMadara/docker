@@ -1,0 +1,19 @@
+name: test Manuel Wordflow
+
+on: 
+    wordflow_dispatch:
+      input:
+        environement:
+          description: 'the environement i need to deploy on'
+            required: true 
+            default: '/dev'
+
+jobs:
+  manuel-job:
+    runs-on: ubuntu-lastest
+
+    steps:
+      - name: exemple 
+        run:
+          echo "mon exemple "
+          echo "env name ${{ github.event.inputs.Environement }}"
